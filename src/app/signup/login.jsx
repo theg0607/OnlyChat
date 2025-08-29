@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import React from "react";
+import Signup from "@/pages/Signup";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ export default function LoginPage() {
         <h1 className="text-3xl font-bold text-center text-blue-600">ONLY CHAT</h1>
         
         <p className="mt-1 text-sm text-center text-gray-600">
-          Sign in to your account
+          Log in to your account
         </p>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -40,35 +40,7 @@ export default function LoginPage() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              User Name
-            </label>
-            <input
-              type="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="User Name"
-              className="mt-1 w-full rounded-lg border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
               Password
-            </label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
-              className="mt-1 w-full rounded-lg border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
-
-           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Confirm Password
             </label>
             <input
               type="password"
@@ -90,7 +62,7 @@ export default function LoginPage() {
 
         <p className="mt-4 text-sm text-center text-gray-600">
           Don’t have an account?{" "}
-          <a href="/register" className="text-blue-600 hover:underline">
+          <a href="/Signup" className="text-blue-600 hover:underline">
             Sign up
           </a>
         </p>
